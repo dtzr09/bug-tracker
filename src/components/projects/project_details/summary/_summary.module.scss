@@ -1,0 +1,31 @@
+@import "../../../../styles/variables.scss";
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subBox {
+  background-color: $border-background-color;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.354);
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .subtitle {
+    font-size: $subtitle-size;
+  }
+}
+
+.memberBox {
+  display: flex;
+  gap: 20px;
+}
+
+.words {
+  font-size: $para-size;
+  font-weight: 300;
+}

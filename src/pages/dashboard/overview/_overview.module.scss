@@ -1,0 +1,72 @@
+.overview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  margin-top: 100px;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 20px 10px;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid white;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  .header {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .button {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.subBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subheader {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+  }
+}
+
+.projectContainer {
+  height: 200px;
+}
+
+.alert {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: -100%;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    margin-right: 4%;
+  }
+}
+
+@keyframes slide {
+  100% {
+    margin-right: 4%;
+  }
+}

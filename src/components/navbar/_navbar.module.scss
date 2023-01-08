@@ -1,0 +1,73 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+  width: 300px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid $border-color;
+  background-color: $background-color;
+
+  .title {
+    position: absolute;
+    top: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: $primary-color;
+    padding: 20px 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subtitle {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 300;
+    color: $primary-color;
+    padding: 20px 0px;
+    position: absolute;
+  }
+
+  .ulBox {
+    margin: 0;
+    padding: 0;
+  }
+
+  .span {
+    width: 90%;
+    border: 0.5px solid $border-color;
+    background-color: $border-color;
+    margin-bottom: 18px;
+    margin-top: 10px;
+  }
+
+  .list {
+    list-style-type: none;
+    padding: 10px 8px;
+    color: $primary-color;
+  }
+
+  .link {
+    cursor: pointer;
+  }
+}
+.button {
+  background-color: rgba(255, 0, 0, 0.254);
+  color: $primary-color;
+  border-radius: 6px;
+  border: 0;
+  padding: 10px 5px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.selectedList {
+  @extend .list;
+  background-color: rgb(109, 109, 144);
+  border-radius: 6px;
+}

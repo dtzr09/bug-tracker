@@ -1,0 +1,79 @@
+@import "../../../../styles/variables.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: $para-size;
+  font-weight: 500;
+}
+
+.ticketContainer {
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 225px 225px 225px 225px;
+  gap: 10px;
+  max-height: 60vh;
+  overflow: scroll;
+  column-gap: 40px;
+}
+
+.ticketcard {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  height: 150px;
+  background-color: #3f4354;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.headerContainer {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.ticketsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.alert {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: -100%;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% {
+    margin-right: 4%;
+  }
+}
+
+@keyframes slide {
+  100% {
+    margin-right: 4%;
+  }
+}
+
+.tab {
+  padding: 5px;
+}
+
+.tab:checked {
+  background-color: #b3d7fe;
+  border-radius: 4px;
+}

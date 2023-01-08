@@ -1,0 +1,146 @@
+@import "../../styles/variables.scss";
+
+.container {
+  height: 100%;
+  overflow: hidden;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr;
+  margin-top: 10px;
+  color: white;
+
+  .title {
+    text-transform: uppercase;
+    padding: 10px 10px;
+  }
+
+  .item {
+    padding: 10px 10px;
+    border-bottom: 0.5px solid $primary-color;
+  }
+
+  .link {
+    @extend .item;
+    color: rgb(121, 43, 43);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.span {
+  border: 0.3px solid white;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.itemContainer {
+  @extend .gridContainer;
+  margin-top: 0px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.itemContainer::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+.itemContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
+
+.members {
+  .header {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+}
+
+.memberContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  .name {
+    padding: 0px 8px;
+  }
+}
+
+.box {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  color: red;
+  cursor: pointer;
+}
+
+//Details component
+.detailContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 10px;
+  color: $primary-color;
+}
+
+.detailBox {
+  width: 80%;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+.navigation {
+  display: flex;
+  gap: 15px;
+  color: $primary-color;
+
+  .tab {
+    padding: 5px 20px;
+    font-size: $para-size;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .currentTab {
+    @extend .tab;
+    background-color: $current-tab-color;
+  }
+}
+
+.words {
+  font-size: $para-size;
+  font-weight: 300;
+}
+
+.backBox {
+  @extend .detailBox;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0px 2px 3px $border-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
